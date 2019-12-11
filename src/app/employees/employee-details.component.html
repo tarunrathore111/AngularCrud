@@ -1,0 +1,24 @@
+<div class="panel-body"  *ngIf="employee">
+        <div class="col-xs-10">
+            <div class="row">
+                <div class="col-xs-6">id</div>
+                <div class="col-xs-6">: {{employee.id}}</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">Name</div>
+                <div class="col-xs-6">: {{employee.userName}}</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">Gender</div>
+                <div class="col-xs-6">: {{employee.gender}}</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">Salary</div>
+                <div class="col-xs-6">: {{employee.annualSalary}}</div>
+            </div>
+            <br/>
+        </div>
+    </div>
+<div class="panel-footer">
+    <a class="btn btn-primary" [routerLink]="['/list']">Back to List</a>
+</div>

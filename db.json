@@ -1,0 +1,16 @@
+{
+  "employees": [
+    { 
+      "id": 1,
+     "name":"Rathore",
+     "gender":"Male",
+     "phoneNumber":70420727288
+    },
+    { 
+      "id": 2,
+     "name":"Rathore1",
+     "gender":"Female",
+     "phoneNumber":70420727288
+    }
+  ]
+}

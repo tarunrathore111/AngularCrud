@@ -1,0 +1,21 @@
+<!-- <h1>
+    {{dataFromChild.name + ' ' + dataFromChild.gender}} 
+</h1> -->
+<h1 #h1Variable *ngIf="errorMsg">
+        Error is : {{errorMsg}}
+</h1>
+<div class="panel panel-primary" hidden="true" *ngFor="let employee of employees">
+    <div (click)="onClick(employee.id)">
+    <!-- <div (click)="h1Variable.innerHTML = childComponent.employee.name"> another way to get data below-->
+            <div (click)="h1Variable.innerHTML = childComponent.getEmployeeName()">
+                <app-display-employee [employee]="employee" (notify)="handleNotify($event)" #childComponent></app-display-employee>
+            </div>
+    </div>
+</div>
+<div class="panel panel-primary" *ngFor="let employee of employees">
+    <app-display-employee [employee]="employee"></app-display-employee>
+</div>
+<!-- <div *ngFor="let employee of employees"> <div>: {{employee.name}}</div>  </div> -->
+
+<!-- Name : {{employee.name}} 
+    Gender : {{employee.gender}} Phone : {{employee.phoneNumber}} -->

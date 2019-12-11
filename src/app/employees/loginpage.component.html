@@ -1,0 +1,40 @@
+<div *ngIf="isLoginError" class="red-text center error-message">Incorrect UserName or Password</div>
+<form #loginForm="ngForm">
+<div class="panel panel-primary">
+    <div class="panel-heading"><div class="text-center"><h3 class="panel-title"> Login here</h3></div></div>
+
+        <div class="panel-body">
+                <!-- <div class="form-group"> -->
+                    <div class="text-center">
+                        <div class="row">
+                        <div class="form-group" [class.has-error]="userNameControl.invalid && userNameControl.touched"
+                                [class.has-success]="userNameControl.valid">
+                                <label>UserName :</label><input required type="text" 
+                                name=userName [(ngModel)]="userName" 
+                                class="form-control" #userNameControl="ngModel">
+                                <span class="help-block" *ngIf="userNameControl.invalid">
+                                    UserName is required..
+                                </span>
+                        </div>
+                        </div>
+                        <div class="row">
+                            <label>Password :</label><input type="text" name=password [(ngModel)]="password" class="form-control">
+                            </div>
+                        <div class="row">
+                            <button type="submit" class="btn btn-primary"
+                            [disabled]="loginForm.invalid" 
+                            (click)="validateUser(userName, password)" >Login</button>
+                            </div>
+
+                    </div>
+                <!-- </div> -->
+            </div>
+        
+        
+    <div class="text-center">
+        <div class="panel-footer">
+        tarunrathore@gmail registered.</div>
+    </div>
+
+</div>
+</form>

@@ -1,0 +1,26 @@
+<div class="panel-body" (click)="handleClick()">
+    <div class="col-xs-10">
+        <div class="row">
+            <div class="col-xs-6">id</div>
+            <div class="col-xs-6">: {{employee.id}}</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">User Name</div>
+            <div class="col-xs-6">: {{employee.userName}}</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">Gender</div>
+            <div class="col-xs-6">: {{employee.gender}}</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">Salary</div>
+            <div class="col-xs-6">: {{employee.annualSalary}}</div>
+        </div>
+        <br/>
+    </div>
+</div>
+<div class="panel-footer">
+    <button class="btn btn-primary" (click)="viewEmployee()">View</button>
+    <button class="btn btn-primary" (click)="editEmployee()">Edit</button>
+    <button class="btn btn-danger" (click)="deleteEmployee()">Delete</button>
+</div>
