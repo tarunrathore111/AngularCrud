@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import {Employee} from '../Models/employee.model';
 import { EmployeeService } from './employee.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import {Department} from '../Models/department.model';
 
 @Component({
   selector: 'app-create-employee',
@@ -16,6 +17,14 @@ export class CreateEmployeeComponent implements OnInit {
   employee: Employee;
   panelTitle:string;
   id: number;
+  savedSuccess = false;
+
+  departments : Department[] = [
+    {id : 1, name: 'IT'},
+    {id : 2, name: 'HR'},
+    {id : 3, name: 'Admin'}
+  ];
+  
 
   constructor(private _employeeService: EmployeeService,
     private _router: Router,
@@ -41,7 +50,7 @@ if(id==0){
     id:null,
     userName:null,
     password:null,
-    gender:null,
+    gender:"Male",
     annualSalary:null,
     dateofBirth:null,
   };
@@ -68,7 +77,10 @@ if(id==0){
 // }
 
 saveEmployee() : void{ 
- this._employeeService.save(this.employee, this.id).subscribe((data) => {data});
+ this._employeeService.save(this.employee, this.id).subscribe((data) => {this.savedSuccess=true;
   // this._router.navigate(['list']);
+});
+  // this._router.navigate(['list']);
+  // this.savedSuccess=true;
 }
 }
