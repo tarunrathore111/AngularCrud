@@ -53,6 +53,7 @@ if(id==0){
     gender:"Male",
     annualSalary:null,
     dateofBirth:null,
+    department:-1
   };
   this.panelTitle="Create";
 } else{
@@ -63,6 +64,7 @@ if(id==0){
     gender:null,
     annualSalary:null,
     dateofBirth:null,
+    department:null
   };
   this.panelTitle="Edit";
   this.employee = Object.assign({},this._employeeService.getEmployeebyID(id));

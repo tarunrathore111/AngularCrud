@@ -4,6 +4,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 import {ConfirmEqualValidatorDirective} from './Shared/confirm-equal-validator.directive'
+import {SelectValidatorDirective} from './Shared/select-validator.directive';
 import {HttpClientModule} from '@angular/common/http'
 // import {BrowserAnimationsModule} from 'ngx-bootstrap/datepicker';
 
@@ -19,6 +20,7 @@ import { LoginpageComponent } from './employees/loginpage.component';
 import { CreateEmployeeCanDeactivateGaurdSerive } from './employees/create-employee-can-deactivate.service'
 import { EmployeeListResolverService } from './employees/employee-list-resolver.service';
 import { EmployeesModule } from './employees/employees.modules';
+// import { HomeCardviewEmployeesComponent } from './employees/home-cardview-employees.component';
 const appRoutes : Routes = [
   {path:'list', 
   component:ListEmployeesComponent,
@@ -41,6 +43,8 @@ canDeactivate: [CreateEmployeeCanDeactivateGaurdSerive]
     DisplayEmployeeComponent,
     EmployeeDetailsComponent,
     LoginpageComponent,
+    SelectValidatorDirective,
+    // HomeCardviewEmployeesComponent
     // HomeEmployeesComponent,
   ],
   imports: [

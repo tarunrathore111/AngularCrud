@@ -5,4 +5,5 @@ export class Employee{
     gender:string;
     annualSalary?:number;
     dateofBirth?:Date;
+    department:number;
 }

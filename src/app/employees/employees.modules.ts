@@ -3,10 +3,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { EmployeesRoutingModule} from './employees-routing.modules'
 import { HomeEmployeesComponent } from './home-employees.component';
+import { HomeCardviewEmployeesComponent } from './home-cardview-employees.component';
+// import {SelectValidatorDirective} from '../Shared/select-validator.directive';
 
 @NgModule({
     declarations: [
-      HomeEmployeesComponent
+      HomeEmployeesComponent,
+      HomeCardviewEmployeesComponent
+      // SelectValidatorDirective
     ],
     imports: [
         ReactiveFormsModule,

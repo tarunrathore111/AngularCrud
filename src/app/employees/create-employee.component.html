@@ -99,13 +99,15 @@
         <div class="form-group" [class.has-error]="department.invalid && department.touched"
         [class.has-success]="department.valid">
                 <label for="department">Department</label>
-                <select id="department" required name="department" [(ngModel)]="document" 
+                <select id="department" appSelectValidator name="department" [(ngModel)]="employee.department" 
                 class="form-control" #department="ngModel">
+                <option value="-1">Select Department</option>
+                <!-- <option [ngValue]="null">Select Department</option> -->
                     <option *ngFor="let dept Of departments" [value]="dept.id">
                         {{dept.name}}
                     </option>
                 </select>
-                <span class="help-block" *ngIf="department.invalid && department.touched">
+                <span class="help-block" *ngIf="department.errors?.defaultSelected && department.touched">
                         departments is required
                 </span>
             </div>

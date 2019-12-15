@@ -22,7 +22,7 @@ export class LoginpageComponent implements OnInit {
     debugger;
     this._employeeService.validateUser(userName,password).subscribe((data : any)=>{
       localStorage.setItem('userToken', data.access_token);
-      this._router.navigate(['/home']);
+      this._router.navigate(['/home/',userName]);
     },
     (err : HttpErrorResponse)=>{
       this.isLoginError = true;

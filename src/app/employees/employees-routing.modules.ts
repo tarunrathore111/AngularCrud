@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeEmployeesComponent } from './home-employees.component';
 const homeRouting: Routes = [
-    {path:'home', component: HomeEmployeesComponent}
+    {path:'home/:userName', component: HomeEmployeesComponent}
 ];
 
 @NgModule({

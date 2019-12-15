@@ -27,6 +27,14 @@ export class EmployeeService{
         // this.listEmployees.push(result);
         return this.listEmployees.find(e=>e.id === id);
     }
+    getEmployeebyName(userName : string): Employee {   
+        this.httpClient.get<Employee[]>('http://localhost:1613/api/Values')
+       .subscribe((data:Employee[]) => { 
+            this.listEmployees = data;
+        });
+       // this.listEmployees.push(result);
+       return this.listEmployees.find(e=>e.userName === userName);
+   }
     validateUser(userName : string, password:string): Observable<any>{
         var userData = "username=" + userName + "&password=" + password + "&grant_type=password";
         var reqHeader = new HttpHeaders({ 'Content-Type': 'application/x-www-urlencoded'});
