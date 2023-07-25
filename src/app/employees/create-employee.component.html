@@ -13,7 +13,7 @@
             <input required id="userName" name="userName" [(ngModel)]="employee.userName" type="text"
              class="form-control" #userName="ngModel">
              <span class="help-block" *ngIf="userName.invalid && userName.touched">
-                 Full userName is required
+                 Full userName is required..
              </span>
         </div>
         <div class="form-group" [class.has-error]="email.invalid && email.touched"
